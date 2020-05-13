@@ -19,9 +19,6 @@ function preload(){
 function setup(){
 createCanvas(400,400);
 
-
-
-
 //border of the board
 borders = createGroup();
 wood1 = createSprite(200, 0, 400, 52);
@@ -42,7 +39,7 @@ borders.bounciness = 0.5;
 arrow = createSprite(200, 250);
 arrow.addAnimation("Arrow",arrow_img);
 arrow.visible = false;
-arrow.scale = 0.09;
+arrow.scale = 0.4;
 arrow.rotateToDirection = true;
 arrow.pause();
 
@@ -227,7 +224,6 @@ function draw() {
     striker.rotation += 5;
   }
 
-
   //move arrow to the striker
   arrow.x = striker.x;
   arrow.y = striker.y;
@@ -237,6 +233,4 @@ function draw() {
   fill(0, 0, 0);
   textSize(20);
   text("Score: " + score, 170, 20);
-
-
 }
